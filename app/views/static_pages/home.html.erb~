@@ -1,0 +1,13 @@
+<% provide(:title, 'Home') %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Infernal Elite | <%= yield(:title) %></title>
+  </head>
+  <body>
+    <h1>Heading for TIE site</h1>
+    <p>
+    There should be two input boxes (login and password) and links to contacts, retal policy, etc.
+    </p>
+  </body>
+</html>
