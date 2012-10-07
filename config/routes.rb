@@ -3,9 +3,10 @@ SampleApp::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-  match '/apply',    to: 'static_pages#apply'
-  match '/contacts', to: 'static_pages#contacts'  
+  match '/signup',  to: 'users#new'
 
+  match '/apply',    to: 'static_pages#apply'
+  match '/contacts', to: 'static_pages#contacts'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

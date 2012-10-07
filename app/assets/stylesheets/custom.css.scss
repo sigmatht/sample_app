@@ -3,7 +3,9 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
-
+$bodyBackground:        $black !default;
+$textColor:             $white !default;
+$heroUnitBackground:              $black !default;
 /* universal */
 
 html {
