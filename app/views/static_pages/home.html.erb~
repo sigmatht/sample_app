@@ -1,13 +1,12 @@
-<% provide(:title, 'Home') %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>The Infernal Elite | <%= yield(:title) %></title>
-  </head>
-  <body>
-    <h1>Heading for TIE site</h1>
-    <p>
-    There should be two input boxes (login and password) and links to contacts, retal policy, etc.
-    </p>
-  </body>
-</html>
+<div class="center hero-unit">
+  <h1><img alt="The Infernal Elite" src="/assets/tie.gif" /></h1>
+
+  <h2>
+    This is the home page for The Infernal Elite
+  </h2>
+
+  <%= link_to "Apply now!", '#', class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+
