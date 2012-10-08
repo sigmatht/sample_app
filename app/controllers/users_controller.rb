@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to @user
+      flash[:success] = "Application successfully submitted.  You'll be notified via email when your application is accepted."
+      redirect_to :root
     else
       render 'new'
     end
