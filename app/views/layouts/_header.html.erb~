@@ -3,9 +3,10 @@
     <div class="container">
       <%= link_to "The Infernal Elite", root_path, id: "logo" %>
       <nav>
+
         <ul class="nav pull-right">
           <% if signed_in? %>
-            <li><%= link_to "Users", '#' %></li>
+            <li><%= link_to "Users", users_path %></li>
             <li id="Reports" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Reports <b class="caret"></b>
@@ -22,7 +23,7 @@
                 Forums <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "All Forums", '#' %></li>
+                <li><%= link_to "All Forums", forums_path %></li>
                 <li><%= link_to "Member Forum", '#' %></li>
               </ul>
             </li>
@@ -46,7 +47,25 @@
             <li><%= link_to "Contacts", contacts_path %></li>
           <% end %>
         </ul>
+        <% if signed_in? %>
+          <br /><br />
+          <table id="market" border="0">
+            <small>
+            <tr>
+            <td>Month</td>
+            <td>Savings</td>
+            </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  </small>
+</table> 
+        <% end %>
+    </div>
       </nav>
     </div>
   </div>
+  
 </header>
+

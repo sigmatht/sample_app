@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 200px;
   background-color: $black;
 }
 
@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-unit {
   background-color: $black;
 }
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -69,6 +70,9 @@ p {
 
 
 /* header */
+
+table, table th,
+table td {border:none;}
 
 #logo {
   float: left;
@@ -159,4 +163,17 @@ input, textarea, select, .uneditable-input {
     }
   }
 }
+#forum_description{
+  size: 30;
+}
+
+.post {width:auto; display:table;}  
+.post span { padding:1em}  
+.post span.left {width:1em; margin:10; background:$red; border:1px solid $red; display:table-cell;} 
+.post span.right  { width:100em; border:1px solid $red; display:table-cell;}   
+
+.topic {width:auto; display:table;}  
+.topic span {padding:1em}  
+.topic span.left {width:1em; margin:10; background:$red; border:1px solid $red; display:table-cell;}  
+.topic span.right  { width:100em; border:1px solid $red; display:table-cell;}   
 

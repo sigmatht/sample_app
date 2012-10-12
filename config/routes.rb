@@ -1,4 +1,10 @@
 SampleApp::Application.routes.draw do
+  resources :posts
+
+  resources :topics
+
+  resources :forums
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
@@ -6,7 +12,7 @@ SampleApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
 
   root to: 'static_pages#home'
-
+  match '/forum', to: 'forums#index'
   match '/apply',  to: 'users#new'
   
   match '/contacts', to: 'static_pages#contacts'
