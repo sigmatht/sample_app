@@ -1,4 +1,10 @@
 <% provide(:title, @topic.name) %>
+    <ul class="breadcrumb" id="breadcrumb">
+    <li><a href="/forums/">All Forums</a> <span class="divider">/</span></li>
+    <li><%= link_to @topic.forum.name, forum_path(@topic.forum_id) %> <span class="divider">/</span></li>
+    <li class="active"><%= @topic.name %> </li>
+ 
+    </ul>
 <p>
 <div class="topic">
 <span class="left"><%= @topic.user.name %><br /><% if admin? %><%= link_to "Delete", @topic.content, :confirm => 'Are you sute?', :method => :delete%><% end %></span>  

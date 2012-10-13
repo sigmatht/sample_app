@@ -1,5 +1,7 @@
+<div class="row">
+  <div class="span6" id="forumtext">
 <%= form_for @forum do |f| %>
-  <p>
+    <p>
     <%= f.label :name %><br />
     <%= f.text_field :name, size:"15x5" %>
   </p>
@@ -8,4 +10,7 @@
     <%= f.text_area :description, :cols => 1, :rows => 1 %>
   </p>
   <p><%= f.submit %></p>
+  
 <% end %>
+</div>
+</div>

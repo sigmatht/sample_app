@@ -7,7 +7,7 @@
       <%= render 'shared/error_messages' %>
 
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, :disabled %>
 
       <%= f.label :email %>
       <%= f.text_field :email %>
@@ -17,9 +17,6 @@
 
       <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
-
-    //  <%= f.label :country_number, "Country Number" %>
-    //  <%= f.country_field :country_number %>
 
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>

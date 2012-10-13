@@ -1,5 +1,22 @@
+
 @import "bootstrap";
 
+.breadcrumb{
+  @include gradient-vertical($navbarBackground, $navbarBackground);
+    .divider {
+    padding: 0 5px;
+    font-color: $red;
+  }
+   a {
+    color: $red;
+   }
+   li {
+    display: inline-block;
+    @include ie7-inline-block();
+    text-shadow: 0 1px 0 $red;
+    color: $red;
+}
+}
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -16,7 +33,7 @@ html {
 }
 
 body {
-  padding-top: 200px;
+  padding-top: 100px;
   background-color: $black;
 }
 
@@ -42,6 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero-unit {
   background-color: $black;
+}
+
+#forumtext{
+  color: $red;
 }
 
 h1 {

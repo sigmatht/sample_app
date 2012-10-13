@@ -49,7 +49,7 @@
         </ul>
         <% if signed_in? %>
           <br /><br />
-          <table id="market" border="0">
+          <table id="market" border="">
             <small>
             <tr>
             <td>Month</td>
