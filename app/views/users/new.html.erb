@@ -5,8 +5,7 @@
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
-
-      <%= f.label :name %>
+      <%= f.label :name, "Display Name" %>
       <%= f.text_field :name %>
 
       <%= f.label :email %>
