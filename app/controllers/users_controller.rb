@@ -13,11 +13,14 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @user.application_ip = request.remote_ip.to_s
   end
   
   def create
-    @user = User.new(params[:user])
+    params[:user][:application_ip] = request.remote_ip.to_s
+    @user = User.new(params[:user]) 
     if @user.save
+      @user.application_ip = request.remote_ip.to_s
       flash[:success] = "Application successfully submitted.  You'll be notified via email when your application is accepted."
       redirect_to :root
     else

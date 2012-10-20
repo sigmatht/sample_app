@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121011024631) do
+ActiveRecord::Schema.define(:version => 20121020030828) do
 
   create_table "forums", :force => true do |t|
     t.string   "name"
@@ -49,8 +49,11 @@ ActiveRecord::Schema.define(:version => 20121011024631) do
     t.string   "remember_token"
     t.boolean  "admin",            :default => false
     t.integer  "permission_level"
+    t.boolean  "approved",         :default => false, :null => false
+    t.string   "application_ip"
   end
 
+  add_index "users", ["approved"], :name => "index_users_on_approved"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
