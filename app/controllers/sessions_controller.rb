@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       if user.approved == true
         sign_in user
-        redirect_back_or user
+        redirect_to '/forums/'
       else
         flash.now[:error] = 'Application has not been approved yet'
         render 'new'
